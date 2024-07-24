@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding="UTF-8" standalone="no" ?>
+<WMS_Capabilities version="1.3.0"  xmlns="http://www.opengis.net/wms"   xmlns:sld="http://www.opengis.net/sld"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xmlns:ms="http://mapserver.gis.umn.edu/mapserver"   xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd  http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd  http://mapserver.gis.umn.edu/mapserver https://mapo.ukrforest.com/wms?service=WMS&amp;version=1.3.0&amp;request=GetSchemaExtension">
+
+<!-- MapServer version 7.6.2 OUTPUT=PNG OUTPUT=JPEG SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=CAIRO SUPPORTS=ICONV SUPPORTS=FRIBIDI SUPPORTS=WMS_SERVER SUPPORTS=WFS_SERVER SUPPORTS=WCS_SERVER SUPPORTS=FASTCGI SUPPORTS=GEOS SUPPORTS=POINT_Z_M SUPPORTS=PBF INPUT=JPEG INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE -->
+
+<Service>
+  <Name>WMS</Name>
+  <Title>WMS Forest Ticket Server for MapServer</Title>
+  <Abstract>FT demo WMS</Abstract>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/>
+  <ContactInformation>
+  </ContactInformation>
+  <MaxWidth>4096</MaxWidth>
+  <MaxHeight>4096</MaxHeight>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <Format>image/vnd.jpeg-png</Format>
+      <Format>image/vnd.jpeg-png8</Format>
+      <Format>application/x-pdf</Format>
+      <Format>image/svg+xml</Format>
+      <Format>image/tiff</Format>
+      <Format>application/x-protobuf</Format>
+      <Format>application/json</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/plain</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <sld:DescribeLayer>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Post>
+        </HTTP>
+      </DCPType>
+    </sld:DescribeLayer>
+    <sld:GetLegendGraphic>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <Format>image/vnd.jpeg-png</Format>
+      <Format>image/vnd.jpeg-png8</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Post>
+        </HTTP>
+      </DCPType>
+    </sld:GetLegendGraphic>
+    <ms:GetStyles>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mapo.ukrforest.com/wms?"/></Post>
+        </HTTP>
+      </DCPType>
+    </ms:GetStyles>
+  </Request>
+  <Exception>
+    <Format>XML</Format>
+    <Format>INIMAGE</Format>
+    <Format>BLANK</Format>
+  </Exception>
+  <sld:UserDefinedSymbolization SupportSLD="1" UserLayer="0" UserStyle="1" RemoteWFS="0" InlineFeature="0" RemoteWCS="0"/>
+  <Layer>
+    <Name>forestticket</Name>
+    <Title>WMS Forest Ticket Server for MapServer</Title>
+    <Abstract>FT demo WMS</Abstract>
+    <CRS>EPSG:3857</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>15.458</westBoundLongitude>
+        <eastBoundLongitude>48.8124</eastBoundLongitude>
+        <southBoundLatitude>44.253</southBoundLatitude>
+        <northBoundLatitude>52.7296</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+    <BoundingBox CRS="EPSG:3857"
+                minx="1.72077e+06" miny="5.50468e+06" maxx="5.43378e+06" maxy="6.93314e+06" />
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>forestries</Name>
+        <Title>Forestries</Title>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>15.458</westBoundLongitude>
+            <eastBoundLongitude>48.8124</eastBoundLongitude>
+            <southBoundLatitude>44.253</southBoundLatitude>
+            <northBoundLatitude>52.7296</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.72077e+06" miny="5.50468e+06" maxx="5.43378e+06" maxy="6.93314e+06" />
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://mapo.ukrforest.com/wms?request=GetMetadata&amp;layer=forestries"/>
+        </MetadataURL>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>quarters</Name>
+        <Title>Quarters</Title>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>15.458</westBoundLongitude>
+            <eastBoundLongitude>48.8124</eastBoundLongitude>
+            <southBoundLatitude>44.253</southBoundLatitude>
+            <northBoundLatitude>52.7296</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.72077e+06" miny="5.50468e+06" maxx="5.43378e+06" maxy="6.93314e+06" />
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://mapo.ukrforest.com/wms?request=GetMetadata&amp;layer=quarters"/>
+        </MetadataURL>
+        <MaxScaleDenominator>250000</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>sections</Name>
+        <Title>Sections</Title>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>15.458</westBoundLongitude>
+            <eastBoundLongitude>48.8124</eastBoundLongitude>
+            <southBoundLatitude>44.253</southBoundLatitude>
+            <northBoundLatitude>52.7296</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.72077e+06" miny="5.50468e+06" maxx="5.43378e+06" maxy="6.93314e+06" />
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://mapo.ukrforest.com/wms?request=GetMetadata&amp;layer=sections"/>
+        </MetadataURL>
+        <MaxScaleDenominator>50000</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>cutting</Name>
+        <Title>Cutting</Title>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>15.458</westBoundLongitude>
+            <eastBoundLongitude>48.8124</eastBoundLongitude>
+            <southBoundLatitude>44.253</southBoundLatitude>
+            <northBoundLatitude>52.7296</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.72077e+06" miny="5.50468e+06" maxx="5.43378e+06" maxy="6.93314e+06" />
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://mapo.ukrforest.com/wms?request=GetMetadata&amp;layer=cutting"/>
+        </MetadataURL>
+        <MaxScaleDenominator>50000</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>cleaningtype</Name>
+        <Title>Cleaningtype</Title>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>15.458</westBoundLongitude>
+            <eastBoundLongitude>48.8124</eastBoundLongitude>
+            <southBoundLatitude>44.253</southBoundLatitude>
+            <northBoundLatitude>52.7296</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.72077e+06" miny="5.50468e+06" maxx="5.43378e+06" maxy="6.93314e+06" />
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://mapo.ukrforest.com/wms?request=GetMetadata&amp;layer=cleaningtype"/>
+        </MetadataURL>
+        <MaxScaleDenominator>100000</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>firedanger</Name>
+        <Title>Firedanger</Title>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>15.458</westBoundLongitude>
+            <eastBoundLongitude>48.8124</eastBoundLongitude>
+            <southBoundLatitude>44.253</southBoundLatitude>
+            <northBoundLatitude>52.7296</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.72077e+06" miny="5.50468e+06" maxx="5.43378e+06" maxy="6.93314e+06" />
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://mapo.ukrforest.com/wms?request=GetMetadata&amp;layer=firedanger"/>
+        </MetadataURL>
+        <MaxScaleDenominator>100000</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Regions</Name>
+        <Title>Regions</Title>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>15.458</westBoundLongitude>
+            <eastBoundLongitude>48.8124</eastBoundLongitude>
+            <southBoundLatitude>44.253</southBoundLatitude>
+            <northBoundLatitude>52.7296</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.72077e+06" miny="5.50468e+06" maxx="5.43378e+06" maxy="6.93314e+06" />
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://mapo.ukrforest.com/wms?request=GetMetadata&amp;layer=Regions"/>
+        </MetadataURL>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>fires</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>fires</Title>
+        <!-- WARNING: Optional Ex_GeographicBoundingBox could not be established for this layer.  Consider setting the EXTENT in the LAYER object, or wms_extent metadata. Also check that your data exists in the DATA statement -->
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://mapo.ukrforest.com/wms?request=GetMetadata&amp;layer=fires"/>
+        </MetadataURL>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Geotiff</Name>
+        <Title>Geotiff</Title>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>15.458</westBoundLongitude>
+            <eastBoundLongitude>48.8124</eastBoundLongitude>
+            <southBoundLatitude>44.253</southBoundLatitude>
+            <northBoundLatitude>52.7296</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.72077e+06" miny="5.50468e+06" maxx="5.43378e+06" maxy="6.93314e+06" />
+        <MetadataURL type="TC211">
+          <Format>text/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://mapo.ukrforest.com/wms?request=GetMetadata&amp;layer=Geotiff"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="47" height="80">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://mapo.ukrforest.com/wms?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=Geotiff&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+  </Layer>
+</Capability>
+</WMS_Capabilities>
